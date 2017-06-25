@@ -1,0 +1,203 @@
+/*
+3RYTYN 2019
+73CLZH 2020
+GLHE6X 2021
+QNHV44 2022
+3AU34X 2023
+2QXHKZ 2024
+2C3VZV 2025
+87P783 2026
+RLH4CE 2027
+UXV6DR 2028
+7E8ZVX 2029
+EVA4CP 2030
+*/
+
+if (Lic == "3RYTYN")
+                {
+                    if (HOY < Convert.ToDateTime("31/12/2019"))
+                    {
+                        Permiso = 1;
+                    }
+                    else
+                    {
+                        Permiso = 0;
+                    }
+                }
+                if (Lic == "73CLZH")
+                {
+                    if (HOY < Convert.ToDateTime("31/12/2020"))
+                    {
+                        Permiso = 1;
+                    }
+                    else
+                    {
+                        Permiso = 0;
+                    }
+                }
+                if (Lic == "GLHE6X")
+                {
+                    if (HOY < Convert.ToDateTime("31/12/2021"))
+                    {
+                        Permiso = 1;
+                    }
+                    else
+                    {
+                        Permiso = 0;
+                    }
+                }
+                if (Lic == "QNHV44")
+                {
+                    if (HOY < Convert.ToDateTime("31/12/2022"))
+                    {
+                        Permiso = 1;
+                    }
+                    else
+                    {
+                        Permiso = 0;
+                    }
+                }
+                if (Lic == "3AU34X")
+                {
+                    if (HOY < Convert.ToDateTime("31/12/2023"))
+                    {
+                        Permiso = 1;
+                    }
+                    else
+                    {
+                        Permiso = 0;
+                    }
+                }
+                if (Lic == "2QXHKZ")
+                {
+                    if (HOY < Convert.ToDateTime("31/12/2024"))
+                    {
+                        Permiso = 1;
+                    }
+                    else
+                    {
+                        Permiso = 0;
+                    }
+                }
+                if (Lic == "2C3VZV")
+                {
+                    if (HOY < Convert.ToDateTime("31/12/2025"))
+                    {
+                        Permiso = 1;
+                    }
+                    else
+                    {
+                        Permiso = 0;
+                    }
+                }
+                if (Lic == "87P783")
+                {
+                    if (HOY < Convert.ToDateTime("31/12/2026"))
+                    {
+                        Permiso = 1;
+                    }
+                    else
+                    {
+                        Permiso = 0;
+                    }
+                }
+                if (Lic == "RLH4CE")
+                {
+                    if (HOY < Convert.ToDateTime("31/12/2027"))
+                    {
+                        Permiso = 1;
+                    }
+                    else
+                    {
+                        Permiso = 0;
+                    }
+                }
+                if (Lic == "UXV6DR")
+                {
+                    if (HOY < Convert.ToDateTime("31/12/2028"))
+                    {
+                        Permiso = 1;
+                    }
+                    else
+                    {
+                        Permiso = 0;
+                    }
+                }
+                if (Lic == "7E8ZVX")
+                {
+                    if (HOY < Convert.ToDateTime("31/12/2029"))
+                    {
+                        Permiso = 1;
+                    }
+                    else
+                    {
+                        Permiso = 0;
+                    }
+                }
+                if (Lic == "EVA4CP")
+                {
+                    if (HOY < Convert.ToDateTime("31/12/2030"))
+                    {
+                        Permiso = 1;
+                    }
+                    else
+                    {
+                        Permiso = 0;
+                    }
+                }
+
+
+-----------------------------------
+if (Lic == "3RYTYN")
+                    {
+                        lbValida.Text = "31/12/2019";
+                    }
+                    else if (Lic == "73CLZH")
+                    {
+                        lbValida.Text = "31/12/2020";
+                    }
+                    else if (Lic == "GLHE6X")
+                    {
+                        lbValida.Text = "31/12/2021";
+                    }
+                    else if (Lic == "QNHV44")
+                    {
+                        lbValida.Text = "31/12/2022";
+                    }
+                    else if (Lic == "3AU34X")
+                    {
+                        lbValida.Text = "31/12/2023";
+                    }
+                    else if (Lic == "2QXHKZ")
+                    {
+                        lbValida.Text = "31/12/2024";
+                    }
+                    else if (Lic == "2C3VZV")
+                    {
+                        lbValida.Text = "31/12/2025";
+                    }
+                    else if (Lic == "87P783")
+                    {
+                        lbValida.Text = "31/12/2026";
+
+                    }
+                    else if (Lic == "RLH4CE")
+                    {
+                        lbValida.Text = "31/12/2027";
+                    }
+                    else if (Lic == "UXV6DR")
+                    {
+                        lbValida.Text = "31/12/2028";
+                    }
+                    else if (Lic == "7E8ZVX")
+                    {
+                        lbValida.Text = "31/12/2029";
+                    }
+                    else if (Lic == "EVA4CP")
+                    {
+                        lbValida.Text = "31/12/2030";
+                    }
+                    else
+                    {
+                        lbValida.Text = "No valida";
+                    }

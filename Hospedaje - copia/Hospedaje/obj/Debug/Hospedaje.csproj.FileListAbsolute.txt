@@ -1,0 +1,15 @@
+C:\Proyectos Ces\Hospedaje\Hospedaje\Hospedaje\bin\Debug\Hospedaje.exe.config
+C:\Proyectos Ces\Hospedaje\Hospedaje\Hospedaje\bin\Debug\Hospedaje.exe
+C:\Proyectos Ces\Hospedaje\Hospedaje\Hospedaje\bin\Debug\Hospedaje.pdb
+C:\Proyectos Ces\Hospedaje\Hospedaje\Hospedaje\obj\Debug\Hospedaje.FormMenu.resources
+C:\Proyectos Ces\Hospedaje\Hospedaje\Hospedaje\obj\Debug\Hospedaje.Properties.Resources.resources
+C:\Proyectos Ces\Hospedaje\Hospedaje\Hospedaje\obj\Debug\Hospedaje.csproj.GenerateResource.Cache
+C:\Proyectos Ces\Hospedaje\Hospedaje\Hospedaje\obj\Debug\Hospedaje.exe
+C:\Proyectos Ces\Hospedaje\Hospedaje\Hospedaje\obj\Debug\Hospedaje.pdb
+C:\Proyectos Ces\Hospedaje\Hospedaje\Hospedaje\obj\Debug\Hospedaje.FormLogin.resources
+C:\Proyectos Ces\Hospedaje\Hospedaje\Hospedaje\obj\Debug\Hospedaje.Administrador.FormLicencia.resources
+C:\Proyectos Ces\Hospedaje\Hospedaje\Hospedaje\obj\Debug\Hospedaje.Administrador.FormUsuario.resources
+C:\Proyectos Ces\Hospedaje\Hospedaje\Hospedaje\obj\Debug\Hospedaje.Administrador.FormInformacionEmpresa.resources
+C:\Proyectos Ces\Hospedaje\Hospedaje\Hospedaje\obj\Debug\Hospedaje.Administrador.FormNumeroFactura.resources
+C:\Proyectos Ces\Hospedaje\Hospedaje\Hospedaje\obj\Debug\Hospedaje.Reserva.FormHabitaciones.resources
+C:\Proyectos Ces\Hospedaje\Hospedaje\Hospedaje\obj\Debug\Hospedaje.Reserva.FormOcupacion.resources
