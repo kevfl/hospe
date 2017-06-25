@@ -56,6 +56,7 @@ go
 
 create table TABLA_HABITACION(
 ID_HABITACION int not null,
+CATEGORIA varchar(50) not null,
 CANTIDAD_PERSONAS int not null,
 PRECIO_NACIONAL decimal(10,2) not null,
 PRECIO_EXTRANJERO decimal(10,2) not null,
@@ -67,25 +68,37 @@ MODIFICA varchar(50) not null,
 constraint PK_ID_HABITACION primary key (ID_HABITACION))
 go
 
-create table TABLA_OCUPACION(
-ID_OCUPACION int not null,
-ID_HABITACION_OCUPACION int not null,
-FECHA_OCUPACION date not null,
-ESTADO_OCUPACION varchar(10) not null,
-MODIFICA varchar(50) not null,
-constraint PK_ID_OCUPACION primary key (ID_OCUPACION))
+create table TABLA_INVENTARIO_HABITACION(
+ID_ACTIVO int not null,
+ID_HABITACION_INVENTARIO int not null,
+NOMBRE varchar(50) not null,
+CANTIDAD_ACT int not null,
+OBSERVACION varchar(50) not null,
+MODIFICA varchar(50) not null
+constraint PKID_CLIENTE primary key (ID_ACTIVO))
 go
 
-alter table TABLA_OCUPACION
-add constraint FK_ID_HABITACION_OCUPACION foreign key (ID_HABITACION_OCUPACION)
+alter table TABLA_INVENTARIO_HABITACION
+add constraint FK_ID_HABITACION_INVENTARIO foreign key (ID_HABITACION_INVENTARIO)
 references TABLA_HABITACION(ID_HABITACION)
 go
 
+create table TABLA_CLIENTE(
+ID_CLIENTE varchar(50) not null,
+NOMBRE varchar(50) not null,
+TELEFONO varchar(50) not null,
+TELEFONO_EMERGENCIA varchar(50) not null,
+OBSERVACION varchar(50) not null,
+MODIFICA varchar(50) not null,
+constraint PK_ID_CLIENTE primary key (ID_CLIENTE))
+go
 
 create table TABLA_RESERVA(
 ID_RESERVA int not null,
 ID_HABITACION_RESERVA int not null,
-CLIENTE varchar(50) not null,
+ID_CLIENTE_RESERVA varchar(50) not null,
+ESTADO varchar(50) not null,
+FECHA_LIMITE date not null,
 FECHA_INGRESO date not null,
 FECHA_SALIDA date not null,
 CANTIDAD_PERSONAS  int not null,
@@ -98,6 +111,12 @@ alter table TABLA_RESERVA
 add constraint FK_ID_HABITACION_RESERVA foreign key (ID_HABITACION_RESERVA)
 references TABLA_HABITACION(ID_HABITACION)
 go
+
+alter table TABLA_RESERVA
+add constraint FK_ID_CLIENTE_RESERVA foreign key (ID_CLIENTE_RESERVA)
+references TABLA_CLIENTE(ID_CLIENTE)
+go
+
 
 /*---------------------------------------------------------------*/
 /*-----------------------         -------------------------------*/
@@ -161,7 +180,8 @@ select * from TABLA_USUARIO
 select * from TABLA_INFO_EMPRE
 
 select * from TABLA_HABITACION
-select * from TABLA_OCUPACION
+select * from TABLA_INVENTARIO_HABITACION
+select * from TABLA_CLIENTE
 select * from TABLA_RESERVA
 
 select * from TABLA_NUM_FACTURA
