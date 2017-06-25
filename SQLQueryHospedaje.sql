@@ -1,4 +1,11 @@
+
 use master 
+go
+
+ALTER DATABASE BD_Hospedaje SET SINGLE_USER WITH ROLLBACK IMMEDIATE
+GO
+
+DROP DATABASE BD_Hospedaje
 go
 
 create database BD_Hospedaje
