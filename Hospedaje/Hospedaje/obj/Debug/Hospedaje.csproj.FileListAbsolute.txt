@@ -29,3 +29,6 @@ D:\Proyecto Hospedaje\Hospedaje\hospe\Hospedaje\Hospedaje\obj\Debug\Hospedaje.Re
 D:\Proyecto Hospedaje\Hospedaje\hospe\Hospedaje\Hospedaje\obj\Debug\Hospedaje.csproj.GenerateResource.Cache
 D:\Proyecto Hospedaje\Hospedaje\hospe\Hospedaje\Hospedaje\obj\Debug\Hospedaje.exe
 D:\Proyecto Hospedaje\Hospedaje\hospe\Hospedaje\Hospedaje\obj\Debug\Hospedaje.pdb
+C:\Proyectos Ces\hospe\Hospedaje\Hospedaje\bin\Debug\Hospedaje.exe.config
+C:\Proyectos Ces\hospe\Hospedaje\Hospedaje\obj\Debug\Hospedaje.exe
+C:\Proyectos Ces\hospe\Hospedaje\Hospedaje\obj\Debug\Hospedaje.pdb
