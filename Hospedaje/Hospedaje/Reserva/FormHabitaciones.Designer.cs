@@ -51,10 +51,10 @@
             this.btModificar = new System.Windows.Forms.Button();
             this.btEliminar = new System.Windows.Forms.Button();
             this.btSalir = new System.Windows.Forms.Button();
-            this.DGV_Habiataciones = new System.Windows.Forms.DataGridView();
+            this.dgvHabiataciones = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
             this.txCategoria = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Habiataciones)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHabiataciones)).BeginInit();
             this.SuspendLayout();
             // 
             // txNumHabitacion
@@ -270,14 +270,15 @@
             this.btSalir.UseVisualStyleBackColor = true;
             this.btSalir.Click += new System.EventHandler(this.btSalir_Click);
             // 
-            // DGV_Habiataciones
+            // dgvHabiataciones
             // 
-            this.DGV_Habiataciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Habiataciones.Location = new System.Drawing.Point(400, 13);
-            this.DGV_Habiataciones.Name = "DGV_Habiataciones";
-            this.DGV_Habiataciones.RowTemplate.Height = 24;
-            this.DGV_Habiataciones.Size = new System.Drawing.Size(708, 405);
-            this.DGV_Habiataciones.TabIndex = 12;
+            this.dgvHabiataciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHabiataciones.Location = new System.Drawing.Point(400, 13);
+            this.dgvHabiataciones.Name = "dgvHabiataciones";
+            this.dgvHabiataciones.RowTemplate.Height = 24;
+            this.dgvHabiataciones.Size = new System.Drawing.Size(708, 405);
+            this.dgvHabiataciones.TabIndex = 12;
+            this.dgvHabiataciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHabiataciones_CellContentClick);
             // 
             // label9
             // 
@@ -304,7 +305,7 @@
             this.ClientSize = new System.Drawing.Size(1120, 430);
             this.Controls.Add(this.txCategoria);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.DGV_Habiataciones);
+            this.Controls.Add(this.dgvHabiataciones);
             this.Controls.Add(this.btSalir);
             this.Controls.Add(this.btEliminar);
             this.Controls.Add(this.btModificar);
@@ -334,7 +335,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Habitaciones";
             this.Load += new System.EventHandler(this.FormHabitaciones_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Habiataciones)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHabiataciones)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,7 +365,7 @@
         private System.Windows.Forms.Button btModificar;
         private System.Windows.Forms.Button btEliminar;
         private System.Windows.Forms.Button btSalir;
-        private System.Windows.Forms.DataGridView DGV_Habiataciones;
+        private System.Windows.Forms.DataGridView dgvHabiataciones;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txCategoria;
     }
