@@ -1,2 +1,7 @@
 Ces
 CESPC\SQLEXPRESS
+
+
+<connectionStrings>
+    <add name="Hospedaje_DB" connectionString="Data Source=CESPC\SQLEXPRESS;Initial Catalog=BD_Hospedaje;Persist Security Info=True;User ID=SA;Password=ces12357+" />
+  </connectionStrings>

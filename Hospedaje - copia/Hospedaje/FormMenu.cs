@@ -129,7 +129,7 @@ namespace Hospedaje
             {
                 if (Lic == "3RYTYN")
                 {
-                    if (HOY < Convert.ToDateTime("31/12/2019"))
+                    if (HOY < DateTime.ParseExact("31/12/2019", "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture))
                     {
                         Permiso = 1;
                     }
@@ -140,7 +140,7 @@ namespace Hospedaje
                 }
                 if (Lic == "73CLZH")
                 {
-                    if (HOY < Convert.ToDateTime("31/12/2020"))
+                    if (HOY < DateTime.ParseExact("31/12/2020", "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture))
                     {
                         Permiso = 1;
                     }
@@ -151,7 +151,7 @@ namespace Hospedaje
                 }
                 if (Lic == "GLHE6X")
                 {
-                    if (HOY < Convert.ToDateTime("31/12/2021"))
+                    if (HOY < DateTime.ParseExact("31/12/2021", "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture))
                     {
                         Permiso = 1;
                     }
@@ -162,7 +162,7 @@ namespace Hospedaje
                 }
                 if (Lic == "QNHV44")
                 {
-                    if (HOY < Convert.ToDateTime("31/12/2022"))
+                    if (HOY < DateTime.ParseExact("31/12/2022", "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture))
                     {
                         Permiso = 1;
                     }
@@ -173,7 +173,7 @@ namespace Hospedaje
                 }
                 if (Lic == "3AU34X")
                 {
-                    if (HOY < Convert.ToDateTime("31/12/2023"))
+                    if (HOY < DateTime.ParseExact("31/12/2023", "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture))
                     {
                         Permiso = 1;
                     }
@@ -184,7 +184,7 @@ namespace Hospedaje
                 }
                 if (Lic == "2QXHKZ")
                 {
-                    if (HOY < Convert.ToDateTime("31/12/2024"))
+                    if (HOY < DateTime.ParseExact("31/12/2024", "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture))
                     {
                         Permiso = 1;
                     }
@@ -195,7 +195,7 @@ namespace Hospedaje
                 }
                 if (Lic == "2C3VZV")
                 {
-                    if (HOY < Convert.ToDateTime("31/12/2025"))
+                    if (HOY < DateTime.ParseExact("31/12/2025", "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture))
                     {
                         Permiso = 1;
                     }
@@ -206,7 +206,7 @@ namespace Hospedaje
                 }
                 if (Lic == "87P783")
                 {
-                    if (HOY < Convert.ToDateTime("31/12/2026"))
+                    if (HOY < DateTime.ParseExact("31/12/2026", "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture))
                     {
                         Permiso = 1;
                     }
@@ -217,7 +217,7 @@ namespace Hospedaje
                 }
                 if (Lic == "RLH4CE")
                 {
-                    if (HOY < Convert.ToDateTime("31/12/2027"))
+                    if (HOY < DateTime.ParseExact("31/12/2027", "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture))
                     {
                         Permiso = 1;
                     }
@@ -228,7 +228,7 @@ namespace Hospedaje
                 }
                 if (Lic == "UXV6DR")
                 {
-                    if (HOY < Convert.ToDateTime("31/12/2028"))
+                    if (HOY < DateTime.ParseExact("31/12/2028", "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture))
                     {
                         Permiso = 1;
                     }
@@ -239,7 +239,7 @@ namespace Hospedaje
                 }
                 if (Lic == "7E8ZVX")
                 {
-                    if (HOY < Convert.ToDateTime("31/12/2029"))
+                    if (HOY < DateTime.ParseExact("31/12/2029", "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture))
                     {
                         Permiso = 1;
                     }
@@ -250,7 +250,7 @@ namespace Hospedaje
                 }
                 if (Lic == "EVA4CP")
                 {
-                    if (HOY < Convert.ToDateTime("31/12/2030"))
+                    if (HOY < DateTime.ParseExact("31/12/2030", "dd/MM/yyyy",System.Globalization.CultureInfo.InvariantCulture))
                     {
                         Permiso = 1;
                     }

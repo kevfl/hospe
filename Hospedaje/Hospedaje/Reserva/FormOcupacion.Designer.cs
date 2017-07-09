@@ -36,9 +36,10 @@
             // 
             this.lbUsuarioLogueado.AutoSize = true;
             this.lbUsuarioLogueado.ForeColor = System.Drawing.Color.Black;
-            this.lbUsuarioLogueado.Location = new System.Drawing.Point(12, 239);
+            this.lbUsuarioLogueado.Location = new System.Drawing.Point(16, 312);
+            this.lbUsuarioLogueado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbUsuarioLogueado.Name = "lbUsuarioLogueado";
-            this.lbUsuarioLogueado.Size = new System.Drawing.Size(52, 13);
+            this.lbUsuarioLogueado.Size = new System.Drawing.Size(72, 18);
             this.lbUsuarioLogueado.TabIndex = 34;
             this.lbUsuarioLogueado.Text = "Usuario : ";
             // 
@@ -46,19 +47,22 @@
             // 
             this.lbModifica.AutoSize = true;
             this.lbModifica.ForeColor = System.Drawing.Color.Black;
-            this.lbModifica.Location = new System.Drawing.Point(70, 239);
+            this.lbModifica.Location = new System.Drawing.Point(94, 312);
+            this.lbModifica.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbModifica.Name = "lbModifica";
-            this.lbModifica.Size = new System.Drawing.Size(47, 13);
+            this.lbModifica.Size = new System.Drawing.Size(64, 18);
             this.lbModifica.TabIndex = 33;
             this.lbModifica.Text = "Modifica";
             // 
             // FormOcupacion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(378, 342);
             this.Controls.Add(this.lbUsuarioLogueado);
             this.Controls.Add(this.lbModifica);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormOcupacion";
             this.Text = "FormOcupacion";
             this.ResumeLayout(false);

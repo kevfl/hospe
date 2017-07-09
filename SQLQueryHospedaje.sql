@@ -1,11 +1,10 @@
-
 use master 
 go
 
-ALTER DATABASE BD_Hospedaje SET SINGLE_USER WITH ROLLBACK IMMEDIATE
-GO
+alter database BD_Hospedaje set single_user with rollback immediate 
+go
 
-DROP DATABASE BD_Hospedaje
+drop database BD_Hospedaje
 go
 
 create database BD_Hospedaje
