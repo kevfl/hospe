@@ -133,7 +133,7 @@ namespace Hospedaje.Reserva
             try
             {
                 bd.conexion.Open();
-                SqlCommand comando = new SqlCommand("insert into TABLA_USUARIO(ID_USUARIO, NOMBRE_USUARIO, CONTRASEÑA_USUARIO, TIPO_USUARIO, MODIFICA)VALUES('" + txUsuario.Text + "', '" + txNombre.Text + "', '" + txContraseña.Text + "', '" + txTipoUsuario.Text + "', '" + lbModifica.Text + "')", bd.conexion);
+                SqlCommand comando = new SqlCommand("insert into TABLA_HABITACION(ID_HABITACION, CATEGORIA, CANTIDAD_PERSONAS, PRECIO_NACIONAL, PRECIO_EXTRANJERO, PRECIO_GOBIERNO, PRECIO_NACIONAL_IMPUESTO, PRECIO_EXTRANJERO_IMPUESTO, PRECIO_GOBIERNO_IMPUESTO, MODIFICA)VALUES('" + txNumHabitacion.Text + "', '" + txCategoria.Text + "', " + txNumPersonas.Text + ", " + txPrecioNacional.Text + ", " + txPrecioExtranjero.Text + ", " + txPrecioGobierno.Text + ", " + txPrecioNacionalImp.Text + ", " + txPrecioExtranjeroImp.Text + ", " + txPrecioGobiernoImp.Text + ", '" + lbModifica.Text + "')", bd.conexion);
                 int i;
                 i = comando.ExecuteNonQuery();
                 if (i == 1)
@@ -157,7 +157,7 @@ namespace Hospedaje.Reserva
             try
             {
                 bd.conexion.Open();
-                SqlCommand comando = new SqlCommand("update TABLA_USUARIO set ID_USUARIO = '" + txUsuario.Text + "', NOMBRE_USUARIO = '" + txNombre.Text + "', CONTRASEÑA_USUARIO = '" + txContraseña.Text + "', TIPO_USUARIO = '" + txTipoUsuario.Text + "'  where (ID_USUARIO = '" + txUsuario.Text + "')", bd.conexion);
+                SqlCommand comando = new SqlCommand("update TABLA_HABITACION set CATEGORIA= '" + txCategoria.Text + "', CANTIDAD_PERSONAS= " + txNumPersonas.Text + ", PRECIO_NACIONAL= " + txPrecioNacional.Text + ", PRECIO_EXTRANJERO= " + txPrecioExtranjero.Text + ", PRECIO_GOBIERNO= " + txPrecioGobierno.Text + ", PRECIO_NACIONAL_IMPUESTO= " + txPrecioNacionalImp.Text + ", PRECIO_EXTRANJERO_IMPUESTO= " + txPrecioExtranjeroImp.Text + ", PRECIO_GOBIERNO_IMPUESTO= " + txPrecioGobiernoImp.Text + ", MODIFICA='" + lbModifica.Text + "' where ID_HABITACION= '" + txNumHabitacion.Text + "')", bd.conexion);
                 int i;
                 i = comando.ExecuteNonQuery();
                 if (i == 1)
@@ -181,7 +181,7 @@ namespace Hospedaje.Reserva
             try
             {
                 bd.conexion.Open();
-                SqlCommand comando = new SqlCommand("delete TABLA_USUARIO  where (ID_USUARIO = '" + txUsuario.Text + "')", bd.conexion);
+                SqlCommand comando = new SqlCommand("delete TABLA_HABITACION  where (ID_HABITACION = '" + txNumHabitacion.Text + "')", bd.conexion);
                 int i;
                 i = comando.ExecuteNonQuery();
                 if (i == 1)
@@ -207,71 +207,99 @@ namespace Hospedaje.Reserva
          *--------------------------------------*/
         private void ValidarAgregar()
         {
-            if (txUsuario.Text != string.Empty)
+            if (txNumHabitacion.Text != string.Empty)
             {
-                if (txNombre.Text != string.Empty)
+                if (txCategoria.Text != string.Empty)
                 {
-                    if (txContraseña.Text != string.Empty)
+                    if (txNumPersonas.Text != string.Empty)
                     {
-                        if (txTipoUsuario.Text != string.Empty)
+                        if (txPrecioNacional.Text != string.Empty)
                         {
-                            Agregar();
-                            ActualizarGridView();
-                            Limpiar();
+                            if (txPrecioExtranjero.Text != string.Empty)
+                            {
+                                if (txPrecioGobierno.Text != string.Empty)
+                                {
+                                    Agregar();
+                                    ActualizarGridView();
+                                    Limpiar();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("No se puede agregar falta precio de gobierno", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se puede agregar falta precio de extranjero", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("No se puede agregar falta tipo de usuario", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("No se puede agregar falta precio de nacional", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                     else
                     {
-                        MessageBox.Show("No se puede agregar falta contraseña", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("No se puede agregar falta numero de personas", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("No se puede agregar falta nombre de usuario", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("No se puede agregar falta categoria", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show("No se puede agregar falta ID de usuario", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No se puede agregar falta numero de habitación ", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void ValidarModificar()
         {
-            if (txUsuario.Text != string.Empty)
+            if (txNumHabitacion.Text != string.Empty)
             {
-                if (txNombre.Text != string.Empty)
+                if (txCategoria.Text != string.Empty)
                 {
-                    if (txContraseña.Text != string.Empty)
+                    if (txNumPersonas.Text != string.Empty)
                     {
-                        if (txTipoUsuario.Text != string.Empty)
+                        if (txPrecioNacional.Text != string.Empty)
                         {
-                            Modificar();
-                            ActualizarGridView();
-                            Limpiar();
+                            if (txPrecioExtranjero.Text != string.Empty)
+                            {
+                                if (txPrecioGobierno.Text != string.Empty)
+                                {
+                                    Modificar();
+                                    ActualizarGridView();
+                                    Limpiar();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("No se puede Modificar falta precio de gobierno", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se puede Modificar falta precio de extranjero", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("No se puede modificar falta tipo de usuario", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("No se puede Modificar falta precio de nacional", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                     else
                     {
-                        MessageBox.Show("No se puede modificar falta contraseña", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("No se puede Modificar falta numero de personas", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("No se puede modificar falta nombre de usuario", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("No se puede Modificar falta categoria", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show("No se puede modificar falta ID de usuario", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No se puede Modificar falta numero de habitación ", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -285,7 +313,7 @@ namespace Hospedaje.Reserva
             }
             else
             {
-                MessageBox.Show("No se puede modificar falta ID de usuario", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No se puede modificar falta numero de habitación", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         /*--------------------------------------*
@@ -296,17 +324,17 @@ namespace Hospedaje.Reserva
 
         private void btAgregar_Click(object sender, EventArgs e)
         {
-
+            ValidarAgregar();
         }
 
         private void btModificar_Click(object sender, EventArgs e)
         {
-
+            ValidarModificar();
         }
 
         private void btEliminar_Click(object sender, EventArgs e)
         {
-
+            ValidarEliminar();
         }
 
         private void btSalir_Click(object sender, EventArgs e)
@@ -314,10 +342,7 @@ namespace Hospedaje.Reserva
             Close();
         }
 
-
-
-
-
+        
         /*--------------------------------------*
          *-------------           --------------*
          *-------------  Eventos  --------------*
