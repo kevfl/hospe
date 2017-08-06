@@ -43,8 +43,8 @@ namespace Hospedaje.Administrador
                 SqlDataAdapter da = new SqlDataAdapter(comando);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
-                dgvUsuario.DataSource = dt;
-                dgvUsuario.AutoResizeColumns();
+                GridViewUsuario.DataSource = dt;
+                GridViewUsuario.AutoResizeColumns();
                 bd.conexion.Close();
             }
             catch (SqlException ex)
@@ -59,7 +59,7 @@ namespace Hospedaje.Administrador
             txUsuario.Text = "";
             txNombre.Text = "";
             txContraseña.Text = "";
-            txTipoUsuario.Text = "";
+            txTipoUsuario.Text = "Defaul";
             txNombre.Enabled = false;
             txContraseña.Enabled = false;
             txTipoUsuario.Enabled = false;
@@ -371,15 +371,15 @@ namespace Hospedaje.Administrador
             }
         }
 
-        private void dgvUsuario_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void GridViewUsuario_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvUsuario.DataSource == null)
+            if (GridViewUsuario.DataSource == null)
             {
                 return;
             }
             else
             {
-                txUsuario.Text = dgvUsuario.CurrentRow.Cells[0].Value.ToString();
+                txUsuario.Text = GridViewUsuario.CurrentRow.Cells[0].Value.ToString();
                 ConsultaUsuario();
             }
         }

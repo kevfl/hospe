@@ -1,6 +1,6 @@
-﻿namespace Hospedaje.Reserva
+﻿namespace Hospedaje.Habitaciones
 {
-    partial class FormOcupacion
+    partial class FormFactura
     {
         /// <summary>
         /// Required designer variable.
@@ -30,41 +30,54 @@
         {
             this.lbUsuarioLogueado = new System.Windows.Forms.Label();
             this.lbModifica = new System.Windows.Forms.Label();
+            this.lbTipoUsuario = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbUsuarioLogueado
             // 
+            this.lbUsuarioLogueado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbUsuarioLogueado.AutoSize = true;
             this.lbUsuarioLogueado.ForeColor = System.Drawing.Color.Black;
-            this.lbUsuarioLogueado.Location = new System.Drawing.Point(16, 312);
-            this.lbUsuarioLogueado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbUsuarioLogueado.Location = new System.Drawing.Point(14, 626);
+            this.lbUsuarioLogueado.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbUsuarioLogueado.Name = "lbUsuarioLogueado";
-            this.lbUsuarioLogueado.Size = new System.Drawing.Size(72, 18);
-            this.lbUsuarioLogueado.TabIndex = 34;
+            this.lbUsuarioLogueado.Size = new System.Drawing.Size(69, 17);
+            this.lbUsuarioLogueado.TabIndex = 71;
             this.lbUsuarioLogueado.Text = "Usuario : ";
             // 
             // lbModifica
             // 
+            this.lbModifica.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbModifica.AutoSize = true;
             this.lbModifica.ForeColor = System.Drawing.Color.Black;
-            this.lbModifica.Location = new System.Drawing.Point(94, 312);
-            this.lbModifica.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbModifica.Location = new System.Drawing.Point(93, 626);
+            this.lbModifica.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbModifica.Name = "lbModifica";
-            this.lbModifica.Size = new System.Drawing.Size(64, 18);
-            this.lbModifica.TabIndex = 33;
+            this.lbModifica.Size = new System.Drawing.Size(60, 17);
+            this.lbModifica.TabIndex = 72;
             this.lbModifica.Text = "Modifica";
             // 
-            // FormOcupacion
+            // lbTipoUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.lbTipoUsuario.AutoSize = true;
+            this.lbTipoUsuario.Location = new System.Drawing.Point(13, 598);
+            this.lbTipoUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTipoUsuario.Name = "lbTipoUsuario";
+            this.lbTipoUsuario.Size = new System.Drawing.Size(85, 17);
+            this.lbTipoUsuario.TabIndex = 73;
+            this.lbTipoUsuario.Text = "TipoUsuario";
+            // 
+            // FormFactura
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(378, 342);
+            this.ClientSize = new System.Drawing.Size(1232, 653);
+            this.Controls.Add(this.lbTipoUsuario);
             this.Controls.Add(this.lbUsuarioLogueado);
             this.Controls.Add(this.lbModifica);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "FormOcupacion";
-            this.Text = "FormOcupacion";
+            this.Name = "FormFactura";
+            this.Text = "FormFactura";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -74,5 +87,6 @@
 
         private System.Windows.Forms.Label lbUsuarioLogueado;
         public System.Windows.Forms.Label lbModifica;
+        public System.Windows.Forms.Label lbTipoUsuario;
     }
 }

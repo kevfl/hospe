@@ -30,7 +30,7 @@
         {
             this.lbUsuarioLogueado = new System.Windows.Forms.Label();
             this.btSalir = new System.Windows.Forms.Button();
-            this.dgvUsuario = new System.Windows.Forms.DataGridView();
+            this.GridViewUsuario = new System.Windows.Forms.DataGridView();
             this.btEliminar = new System.Windows.Forms.Button();
             this.btModificar = new System.Windows.Forms.Button();
             this.btAgregar = new System.Windows.Forms.Button();
@@ -43,7 +43,7 @@
             this.lbNombre = new System.Windows.Forms.Label();
             this.lbUsuario = new System.Windows.Forms.Label();
             this.lbModifica = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridViewUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // lbUsuarioLogueado
@@ -69,30 +69,30 @@
             this.btSalir.UseVisualStyleBackColor = true;
             this.btSalir.Click += new System.EventHandler(this.btSalir_Click_1);
             // 
-            // dgvUsuario
+            // GridViewUsuario
             // 
-            this.dgvUsuario.AllowUserToAddRows = false;
-            this.dgvUsuario.AllowUserToDeleteRows = false;
-            this.dgvUsuario.AllowUserToResizeColumns = false;
-            this.dgvUsuario.AllowUserToResizeRows = false;
-            this.dgvUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.GridViewUsuario.AllowUserToAddRows = false;
+            this.GridViewUsuario.AllowUserToDeleteRows = false;
+            this.GridViewUsuario.AllowUserToResizeColumns = false;
+            this.GridViewUsuario.AllowUserToResizeRows = false;
+            this.GridViewUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvUsuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvUsuario.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuario.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
-            this.dgvUsuario.EnableHeadersVisualStyles = false;
-            this.dgvUsuario.Location = new System.Drawing.Point(11, 218);
-            this.dgvUsuario.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.dgvUsuario.MultiSelect = false;
-            this.dgvUsuario.Name = "dgvUsuario";
-            this.dgvUsuario.ReadOnly = true;
-            this.dgvUsuario.RowTemplate.Height = 24;
-            this.dgvUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsuario.Size = new System.Drawing.Size(1107, 345);
-            this.dgvUsuario.TabIndex = 29;
-            this.dgvUsuario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuario_CellClick);
+            this.GridViewUsuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GridViewUsuario.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.GridViewUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridViewUsuario.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
+            this.GridViewUsuario.EnableHeadersVisualStyles = false;
+            this.GridViewUsuario.Location = new System.Drawing.Point(11, 218);
+            this.GridViewUsuario.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.GridViewUsuario.MultiSelect = false;
+            this.GridViewUsuario.Name = "GridViewUsuario";
+            this.GridViewUsuario.ReadOnly = true;
+            this.GridViewUsuario.RowTemplate.Height = 24;
+            this.GridViewUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.GridViewUsuario.Size = new System.Drawing.Size(1107, 345);
+            this.GridViewUsuario.TabIndex = 29;
+            this.GridViewUsuario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridViewUsuario_CellClick_1);
             // 
             // btEliminar
             // 
@@ -235,7 +235,7 @@
             this.ClientSize = new System.Drawing.Size(1130, 603);
             this.Controls.Add(this.lbUsuarioLogueado);
             this.Controls.Add(this.btSalir);
-            this.Controls.Add(this.dgvUsuario);
+            this.Controls.Add(this.GridViewUsuario);
             this.Controls.Add(this.btEliminar);
             this.Controls.Add(this.btModificar);
             this.Controls.Add(this.btAgregar);
@@ -249,13 +249,13 @@
             this.Controls.Add(this.lbUsuario);
             this.Controls.Add(this.lbModifica);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuario";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormUsuario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridViewUsuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,7 +265,7 @@
 
         private System.Windows.Forms.Label lbUsuarioLogueado;
         private System.Windows.Forms.Button btSalir;
-        private System.Windows.Forms.DataGridView dgvUsuario;
+        private System.Windows.Forms.DataGridView GridViewUsuario;
         private System.Windows.Forms.Button btEliminar;
         private System.Windows.Forms.Button btModificar;
         private System.Windows.Forms.Button btAgregar;

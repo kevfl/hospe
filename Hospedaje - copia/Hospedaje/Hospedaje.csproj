@@ -84,20 +84,44 @@
     <Compile Include="FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reserva\FormHabitaciones.cs">
+    <Compile Include="Habitaciones\FormFactura.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reserva\FormHabitaciones.Designer.cs">
+    <Compile Include="Habitaciones\FormFactura.Designer.cs">
+      <DependentUpon>FormFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Habitaciones\FormHabitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Habitaciones\FormHabitaciones.Designer.cs">
       <DependentUpon>FormHabitaciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reserva\FormOcupacion.cs">
+    <Compile Include="Habitaciones\FormHx.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reserva\FormOcupacion.Designer.cs">
-      <DependentUpon>FormOcupacion.cs</DependentUpon>
+    <Compile Include="Habitaciones\FormHx.Designer.cs">
+      <DependentUpon>FormHx.cs</DependentUpon>
     </Compile>
+    <Compile Include="Habitaciones\FormNuevaHabiatacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Habitaciones\FormNuevaHabiatacion.Designer.cs">
+      <DependentUpon>FormNuevaHabiatacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Habitaciones\FormPrecio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Habitaciones\FormPrecio.Designer.cs">
+      <DependentUpon>FormPrecio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Habitaciones\FormReservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Habitaciones\FormReservas.Designer.cs">
+      <DependentUpon>FormReservas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Administrador\FormInformacionEmpresa.resx">
       <DependentUpon>FormInformacionEmpresa.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +140,24 @@
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Habitaciones\FormFactura.resx">
+      <DependentUpon>FormFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Habitaciones\FormHabitaciones.resx">
+      <DependentUpon>FormHabitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Habitaciones\FormHx.resx">
+      <DependentUpon>FormHx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Habitaciones\FormNuevaHabiatacion.resx">
+      <DependentUpon>FormNuevaHabiatacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Habitaciones\FormPrecio.resx">
+      <DependentUpon>FormPrecio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Habitaciones\FormReservas.resx">
+      <DependentUpon>FormReservas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -126,12 +168,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Reserva\FormHabitaciones.resx">
-      <DependentUpon>FormHabitaciones.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reserva\FormOcupacion.resx">
-      <DependentUpon>FormOcupacion.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

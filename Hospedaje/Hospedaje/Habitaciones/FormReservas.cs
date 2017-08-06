@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Hospedaje.Reserva
+namespace Hospedaje.Habitaciones
 {
-    public partial class FormOcupacion : Form
+    public partial class FormReservas : Form
     {
-        public FormOcupacion()
+        public FormReservas()
         {
             InitializeComponent();
         }
