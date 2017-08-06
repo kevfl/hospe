@@ -59,7 +59,7 @@ namespace Hospedaje.Administrador
             txUsuario.Text = "";
             txNombre.Text = "";
             txContraseña.Text = "";
-            txTipoUsuario.Text = "";
+            txTipoUsuario.Text = "Defaul";
             txNombre.Enabled = false;
             txContraseña.Enabled = false;
             txTipoUsuario.Enabled = false;

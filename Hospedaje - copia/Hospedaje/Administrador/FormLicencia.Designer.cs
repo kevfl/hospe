@@ -45,9 +45,10 @@
             this.lbUsuarioLogueado.AutoSize = true;
             this.lbUsuarioLogueado.BackColor = System.Drawing.Color.White;
             this.lbUsuarioLogueado.ForeColor = System.Drawing.Color.Black;
-            this.lbUsuarioLogueado.Location = new System.Drawing.Point(23, 196);
+            this.lbUsuarioLogueado.Location = new System.Drawing.Point(30, 257);
+            this.lbUsuarioLogueado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbUsuarioLogueado.Name = "lbUsuarioLogueado";
-            this.lbUsuarioLogueado.Size = new System.Drawing.Size(52, 13);
+            this.lbUsuarioLogueado.Size = new System.Drawing.Size(72, 18);
             this.lbUsuarioLogueado.TabIndex = 26;
             this.lbUsuarioLogueado.Text = "Usuario : ";
             // 
@@ -57,9 +58,10 @@
             this.lbModifica.AutoSize = true;
             this.lbModifica.BackColor = System.Drawing.Color.White;
             this.lbModifica.ForeColor = System.Drawing.Color.Black;
-            this.lbModifica.Location = new System.Drawing.Point(92, 196);
+            this.lbModifica.Location = new System.Drawing.Point(122, 257);
+            this.lbModifica.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbModifica.Name = "lbModifica";
-            this.lbModifica.Size = new System.Drawing.Size(47, 13);
+            this.lbModifica.Size = new System.Drawing.Size(64, 18);
             this.lbModifica.TabIndex = 25;
             this.lbModifica.Text = "Modifica";
             // 
@@ -68,10 +70,10 @@
             this.lbValida.AutoSize = true;
             this.lbValida.BackColor = System.Drawing.Color.White;
             this.lbValida.ForeColor = System.Drawing.Color.Black;
-            this.lbValida.Location = new System.Drawing.Point(144, 42);
-            this.lbValida.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbValida.Location = new System.Drawing.Point(192, 55);
+            this.lbValida.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lbValida.Name = "lbValida";
-            this.lbValida.Size = new System.Drawing.Size(25, 13);
+            this.lbValida.Size = new System.Drawing.Size(32, 18);
             this.lbValida.TabIndex = 24;
             this.lbValida.Text = "000";
             // 
@@ -80,19 +82,19 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(29, 42);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(38, 55);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 13);
+            this.label2.Size = new System.Drawing.Size(91, 18);
             this.label2.TabIndex = 23;
             this.label2.Text = "Valida hasta:";
             // 
             // btActualizar
             // 
-            this.btActualizar.Location = new System.Drawing.Point(148, 112);
-            this.btActualizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btActualizar.Location = new System.Drawing.Point(198, 147);
+            this.btActualizar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btActualizar.Name = "btActualizar";
-            this.btActualizar.Size = new System.Drawing.Size(133, 37);
+            this.btActualizar.Size = new System.Drawing.Size(178, 49);
             this.btActualizar.TabIndex = 22;
             this.btActualizar.Text = "Actualizar";
             this.btActualizar.UseVisualStyleBackColor = true;
@@ -100,10 +102,10 @@
             // 
             // txLicencia
             // 
-            this.txLicencia.Location = new System.Drawing.Point(148, 80);
-            this.txLicencia.Margin = new System.Windows.Forms.Padding(4);
+            this.txLicencia.Location = new System.Drawing.Point(198, 104);
+            this.txLicencia.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txLicencia.Name = "txLicencia";
-            this.txLicencia.Size = new System.Drawing.Size(132, 20);
+            this.txLicencia.Size = new System.Drawing.Size(174, 24);
             this.txLicencia.TabIndex = 21;
             this.txLicencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txLicencia_KeyPress);
             // 
@@ -112,10 +114,10 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(25, 84);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(34, 110);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 13);
+            this.label3.Size = new System.Drawing.Size(112, 18);
             this.label3.TabIndex = 20;
             this.label3.Text = "Nueva Licencia:";
             // 
@@ -124,10 +126,10 @@
             this.lbLicenciaActual.AutoSize = true;
             this.lbLicenciaActual.BackColor = System.Drawing.Color.White;
             this.lbLicenciaActual.ForeColor = System.Drawing.Color.Black;
-            this.lbLicenciaActual.Location = new System.Drawing.Point(144, 15);
-            this.lbLicenciaActual.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbLicenciaActual.Location = new System.Drawing.Point(192, 19);
+            this.lbLicenciaActual.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lbLicenciaActual.Name = "lbLicenciaActual";
-            this.lbLicenciaActual.Size = new System.Drawing.Size(25, 13);
+            this.lbLicenciaActual.Size = new System.Drawing.Size(32, 18);
             this.lbLicenciaActual.TabIndex = 19;
             this.lbLicenciaActual.Text = "000";
             // 
@@ -136,18 +138,18 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(25, 15);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(34, 19);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 13);
+            this.label1.Size = new System.Drawing.Size(110, 18);
             this.label1.TabIndex = 18;
             this.label1.Text = "Licencia Actual:";
             // 
             // FormLicencia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(305, 224);
+            this.ClientSize = new System.Drawing.Size(406, 293);
             this.Controls.Add(this.lbUsuarioLogueado);
             this.Controls.Add(this.lbModifica);
             this.Controls.Add(this.lbValida);
@@ -157,6 +159,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lbLicenciaActual);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormLicencia";

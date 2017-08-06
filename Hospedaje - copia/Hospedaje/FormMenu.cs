@@ -38,8 +38,7 @@ namespace Hospedaje
 
                 if (Permiso == 1)
                 {
-                    Item_Reservas.Enabled = false;
-                    Item_Facturación.Enabled = false;
+                    Item_MenuHabitaciones.Enabled = false;
                     Item_Reportes.Enabled = false;
                     Item_Administrador.Enabled = false;
                     Item_Usuario.Enabled = false;
@@ -49,8 +48,7 @@ namespace Hospedaje
 
                     if (txTipoUsu.Text == "Programador")
                     {
-                        Item_Reservas.Enabled = true;
-                        Item_Facturación.Enabled = true;
+                        Item_MenuHabitaciones.Enabled = true;
                         Item_Reportes.Enabled = true;
                         Item_Administrador.Enabled = true;
                         Item_Usuario.Enabled = true;
@@ -60,8 +58,7 @@ namespace Hospedaje
                     }
                     else if (txTipoUsu.Text == "Administrador")
                     {
-                        Item_Reservas.Enabled = true;
-                        Item_Facturación.Enabled = true;
+                        Item_MenuHabitaciones.Enabled = true;
                         Item_Reportes.Enabled = true;
                         Item_Administrador.Enabled = true;
                         Item_Usuario.Enabled = true;
@@ -70,15 +67,13 @@ namespace Hospedaje
                     }
                     else if (txTipoUsu.Text == "Defaul")
                     {
-                        Item_Reservas.Enabled = true;
-                        Item_Facturación.Enabled = true;
+                        Item_MenuHabitaciones.Enabled = true;
                         Item_Reportes.Enabled = true;                        
                     }                                        
                 }
                 else
                 {
-                    Item_Reservas.Enabled = false;
-                    Item_Facturación.Enabled = false;
+                    Item_MenuHabitaciones.Enabled = false;
                     Item_Reportes.Enabled = false;
                     Item_Administrador.Enabled = true;
                     MessageBox.Show("La Licencia a caducado favor actualizar y reiniciar el sistema. \n Correo: cesar-flores-g@hotmail.com", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -129,7 +124,7 @@ namespace Hospedaje
             {
                 if (Lic == "3RYTYN")
                 {
-                    if (HOY < Convert.ToDateTime("31/12/2019"))
+                    if (HOY < DateTime.ParseExact("31/12/2019", "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture))
                     {
                         Permiso = 1;
                     }
@@ -140,7 +135,7 @@ namespace Hospedaje
                 }
                 if (Lic == "73CLZH")
                 {
-                    if (HOY < Convert.ToDateTime("31/12/2020"))
+                    if (HOY < DateTime.ParseExact("31/12/2020", "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture))
                     {
                         Permiso = 1;
                     }
@@ -151,7 +146,7 @@ namespace Hospedaje
                 }
                 if (Lic == "GLHE6X")
                 {
-                    if (HOY < Convert.ToDateTime("31/12/2021"))
+                    if (HOY < DateTime.ParseExact("31/12/2021", "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture))
                     {
                         Permiso = 1;
                     }
@@ -162,7 +157,7 @@ namespace Hospedaje
                 }
                 if (Lic == "QNHV44")
                 {
-                    if (HOY < Convert.ToDateTime("31/12/2022"))
+                    if (HOY < DateTime.ParseExact("31/12/2022", "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture))
                     {
                         Permiso = 1;
                     }
@@ -173,7 +168,7 @@ namespace Hospedaje
                 }
                 if (Lic == "3AU34X")
                 {
-                    if (HOY < Convert.ToDateTime("31/12/2023"))
+                    if (HOY < DateTime.ParseExact("31/12/2023", "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture))
                     {
                         Permiso = 1;
                     }
@@ -184,7 +179,7 @@ namespace Hospedaje
                 }
                 if (Lic == "2QXHKZ")
                 {
-                    if (HOY < Convert.ToDateTime("31/12/2024"))
+                    if (HOY < DateTime.ParseExact("31/12/2024", "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture))
                     {
                         Permiso = 1;
                     }
@@ -195,7 +190,7 @@ namespace Hospedaje
                 }
                 if (Lic == "2C3VZV")
                 {
-                    if (HOY < Convert.ToDateTime("31/12/2025"))
+                    if (HOY < DateTime.ParseExact("31/12/2025", "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture))
                     {
                         Permiso = 1;
                     }
@@ -206,7 +201,7 @@ namespace Hospedaje
                 }
                 if (Lic == "87P783")
                 {
-                    if (HOY < Convert.ToDateTime("31/12/2026"))
+                    if (HOY < DateTime.ParseExact("31/12/2026", "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture))
                     {
                         Permiso = 1;
                     }
@@ -217,7 +212,7 @@ namespace Hospedaje
                 }
                 if (Lic == "RLH4CE")
                 {
-                    if (HOY < Convert.ToDateTime("31/12/2027"))
+                    if (HOY < DateTime.ParseExact("31/12/2027", "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture))
                     {
                         Permiso = 1;
                     }
@@ -228,7 +223,7 @@ namespace Hospedaje
                 }
                 if (Lic == "UXV6DR")
                 {
-                    if (HOY < Convert.ToDateTime("31/12/2028"))
+                    if (HOY < DateTime.ParseExact("31/12/2028", "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture))
                     {
                         Permiso = 1;
                     }
@@ -239,7 +234,7 @@ namespace Hospedaje
                 }
                 if (Lic == "7E8ZVX")
                 {
-                    if (HOY < Convert.ToDateTime("31/12/2029"))
+                    if (HOY < DateTime.ParseExact("31/12/2029", "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture))
                     {
                         Permiso = 1;
                     }
@@ -250,7 +245,7 @@ namespace Hospedaje
                 }
                 if (Lic == "EVA4CP")
                 {
-                    if (HOY < Convert.ToDateTime("31/12/2030"))
+                    if (HOY < DateTime.ParseExact("31/12/2030", "dd/MM/yyyy",System.Globalization.CultureInfo.InvariantCulture))
                     {
                         Permiso = 1;
                     }
@@ -282,12 +277,37 @@ namespace Hospedaje
          *-------------  Botones  --------------*
 	     *-------------           --------------*
          *--------------------------------------*/
-
+         
         private void Item_Habitaciones_Click(object sender, EventArgs e)
         {
-            Reserva.FormHabitaciones Habitaciones = new Reserva.FormHabitaciones();
+            Habitaciones.FormHabitaciones Habitaciones = new Habitaciones.FormHabitaciones();
             Habitaciones.lbModifica.Text = txNombreUsu.Text;
             Habitaciones.ShowDialog();
+            this.Show();
+        }
+
+        private void Item_Facturas_Click(object sender, EventArgs e)
+        {
+            Habitaciones.FormFactura Factura = new Habitaciones.FormFactura();
+            Factura.lbModifica.Text = txNombreUsu.Text;
+            Factura.lbTipoUsuario.Text = txTipoUsu.Text;
+            Factura.ShowDialog();
+            this.Show();
+        }
+
+        private void Item_Precios_Click(object sender, EventArgs e)
+        {
+            Habitaciones.FormPrecio Precio = new Habitaciones.FormPrecio();
+            Precio.lbModifica.Text = txNombreUsu.Text;
+            Precio.ShowDialog();
+            this.Show();
+        }
+
+        private void Item_NuevaHabitacion_Click(object sender, EventArgs e)
+        {
+            Habitaciones.FormNuevaHabiatacion NuevaHabiatacion = new Habitaciones.FormNuevaHabiatacion();
+            NuevaHabiatacion.lbModifica.Text = txNombreUsu.Text;
+            NuevaHabiatacion.ShowDialog();
             this.Show();
         }
 

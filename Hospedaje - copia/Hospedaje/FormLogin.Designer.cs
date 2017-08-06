@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.txUsuario = new System.Windows.Forms.TextBox();
             this.txContraseña = new System.Windows.Forms.TextBox();
             this.txNombreUsuario = new System.Windows.Forms.TextBox();
@@ -42,41 +43,47 @@
             // 
             // txUsuario
             // 
-            this.txUsuario.Location = new System.Drawing.Point(222, 12);
+            this.txUsuario.Location = new System.Drawing.Point(296, 15);
+            this.txUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txUsuario.Name = "txUsuario";
-            this.txUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txUsuario.Size = new System.Drawing.Size(132, 24);
             this.txUsuario.TabIndex = 0;
             this.txUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txUsuario_KeyPress);
             // 
             // txContraseña
             // 
-            this.txContraseña.Location = new System.Drawing.Point(222, 38);
+            this.txContraseña.Location = new System.Drawing.Point(296, 49);
+            this.txContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.txContraseña.Name = "txContraseña";
-            this.txContraseña.Size = new System.Drawing.Size(100, 20);
+            this.txContraseña.PasswordChar = '*';
+            this.txContraseña.Size = new System.Drawing.Size(132, 24);
             this.txContraseña.TabIndex = 1;
             this.txContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txContraseña_KeyPress);
             // 
             // txNombreUsuario
             // 
-            this.txNombreUsuario.Location = new System.Drawing.Point(222, 131);
+            this.txNombreUsuario.Location = new System.Drawing.Point(296, 172);
+            this.txNombreUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txNombreUsuario.Name = "txNombreUsuario";
-            this.txNombreUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txNombreUsuario.Size = new System.Drawing.Size(132, 24);
             this.txNombreUsuario.TabIndex = 2;
             this.txNombreUsuario.Visible = false;
             // 
             // txTipoUsuario
             // 
-            this.txTipoUsuario.Location = new System.Drawing.Point(222, 158);
+            this.txTipoUsuario.Location = new System.Drawing.Point(296, 206);
+            this.txTipoUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txTipoUsuario.Name = "txTipoUsuario";
-            this.txTipoUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txTipoUsuario.Size = new System.Drawing.Size(132, 24);
             this.txTipoUsuario.TabIndex = 3;
             this.txTipoUsuario.Visible = false;
             // 
             // btAceptar
             // 
-            this.btAceptar.Location = new System.Drawing.Point(166, 78);
+            this.btAceptar.Location = new System.Drawing.Point(222, 102);
+            this.btAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btAceptar.Name = "btAceptar";
-            this.btAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btAceptar.Size = new System.Drawing.Size(100, 30);
             this.btAceptar.TabIndex = 4;
             this.btAceptar.Text = "Aceptar";
             this.btAceptar.UseVisualStyleBackColor = true;
@@ -84,9 +91,10 @@
             // 
             // btSalir
             // 
-            this.btSalir.Location = new System.Drawing.Point(247, 78);
+            this.btSalir.Location = new System.Drawing.Point(330, 102);
+            this.btSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btSalir.Name = "btSalir";
-            this.btSalir.Size = new System.Drawing.Size(75, 23);
+            this.btSalir.Size = new System.Drawing.Size(100, 30);
             this.btSalir.TabIndex = 5;
             this.btSalir.Text = "Salir";
             this.btSalir.UseVisualStyleBackColor = true;
@@ -94,35 +102,40 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Image = global::Hospedaje.Properties.Resources.Hotel_info;
+            this.pictureBox1.Location = new System.Drawing.Point(16, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 89);
+            this.pictureBox1.Size = new System.Drawing.Size(134, 117);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(142, 15);
+            this.label1.Location = new System.Drawing.Point(190, 19);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.Size = new System.Drawing.Size(60, 18);
             this.label1.TabIndex = 7;
             this.label1.Text = "Usuario";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(142, 41);
+            this.label2.Location = new System.Drawing.Point(190, 53);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.Size = new System.Drawing.Size(85, 18);
             this.label2.TabIndex = 8;
             this.label2.Text = "Contraseña";
             // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(334, 117);
+            this.ClientSize = new System.Drawing.Size(446, 153);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -132,6 +145,9 @@
             this.Controls.Add(this.txNombreUsuario);
             this.Controls.Add(this.txContraseña);
             this.Controls.Add(this.txUsuario);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormLogin";

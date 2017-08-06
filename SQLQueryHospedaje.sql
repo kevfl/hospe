@@ -1,11 +1,10 @@
-
 use master 
 go
 
-ALTER DATABASE BD_Hospedaje SET SINGLE_USER WITH ROLLBACK IMMEDIATE
-GO
+alter database BD_Hospedaje set single_user with rollback immediate 
+go
 
-DROP DATABASE BD_Hospedaje
+drop database BD_Hospedaje
 go
 
 create database BD_Hospedaje
@@ -61,19 +60,62 @@ go
 /*-----------------------           -------------------------------*/
 /*-----------------------------------------------------------------*/
 
-create table TABLA_HABITACION(
+create table TABLA_HABITACIONES(
 ID_HABITACION int not null,
-CATEGORIA varchar(50) not null,
+ESTADO varchar(50) not null,
+ID_CLIENT varchar(50) not null,
+FECHA_INGRESO date not null,
+FECHA_SALIDA date not null,
+CANTIDAD_DIAS int not null,
 CANTIDAD_PERSONAS int not null,
-PRECIO_NACIONAL decimal(10,2) not null,
-PRECIO_EXTRANJERO decimal(10,2) not null,
-PRECIO_GOBIERNO decimal(10,2) not null,
-PRECIO_NACIONAL_IMPUESTO decimal(10,2) not null,
-PRECIO_EXTRANJERO_IMPUESTO decimal(10,2) not null,
-PRECIO_GOBIERNO_IMPUESTO decimal(10,2) not null,
+PRECIO_NACIONAL int not null,
+PRECIO_EXTRANJERO int not null,
+PRECIO_GOBIERNO int not null,
+ADELANTO_DINERO decimal(10,2) not null,
+PENDIENTE_DINERO decimal(10,2) not null,
 MODIFICA varchar(50) not null,
 constraint PK_ID_HABITACION primary key (ID_HABITACION))
 go
+
+create table TABLA_RESERVA(
+ID_RESERVA int not null identity(1,1),
+ID_HABITACION_RESERVA int not null,
+ID_CLIENT varchar(50) not null,
+FECHA_INGRESO_RESERVA date not null,
+FECHA_SALIDA_RESERVA date not null,
+FECHA_LIMITE_RESERVA date not null,
+ADELANTO_DINERO int not null,
+MODIFICA varchar(50) not null,
+constraint PK_ID_RESERVA primary key (ID_RESERVA))
+go
+
+alter table TABLA_RESERVA
+add constraint FK_ID_HABITACION_RESERVA foreign key (ID_HABITACION_RESERVA)
+references TABLA_HABITACIONES(ID_HABITACION)
+go
+
+create table TABLA_CLIENTE(
+ID_CLIENTE varchar(50) not null,
+NOMBRE varchar(50) not null,
+NACIONALIDAD varchar(50) not null,
+TELEFONO varchar(50) not null,
+TELEFONO_EMERGENCIA varchar(50) not null,
+OBSERVACION varchar(50) not null,
+MODIFICA varchar(50) not null,
+constraint PK_ID_CLIENTE primary key (ID_CLIENTE))
+go
+
+alter table TABLA_HABITACIONES
+add constraint FK_ID_CLIENTE foreign key (ID_CLIENT)
+references TABLA_CLIENTE(ID_CLIENTE)
+go
+
+alter table TABLA_RESERVA
+add constraint FK_ID_CLIENT foreign key (ID_CLIENT)
+references TABLA_CLIENTE(ID_CLIENTE)
+go
+
+insert into TABLA_CLIENTE(ID_CLIENTE, NOMBRE, NACIONALIDAD, TELEFONO, TELEFONO_EMERGENCIA, OBSERVACION, MODIFICA)VALUES('Default', 'Default', 'Default', '01/01/1900', '01/01/1900',  'Default',  'CES_ADMIN')
 
 create table TABLA_INVENTARIO_HABITACION(
 ID_ACTIVO int not null,
@@ -82,48 +124,13 @@ NOMBRE varchar(50) not null,
 CANTIDAD_ACT int not null,
 OBSERVACION varchar(50) not null,
 MODIFICA varchar(50) not null
-constraint PKID_CLIENTE primary key (ID_ACTIVO))
+constraint PK_ID_ACTIVO primary key (ID_ACTIVO))
 go
 
 alter table TABLA_INVENTARIO_HABITACION
 add constraint FK_ID_HABITACION_INVENTARIO foreign key (ID_HABITACION_INVENTARIO)
-references TABLA_HABITACION(ID_HABITACION)
+references TABLA_HABITACIONES(ID_HABITACION)
 go
-
-create table TABLA_CLIENTE(
-ID_CLIENTE varchar(50) not null,
-NOMBRE varchar(50) not null,
-TELEFONO varchar(50) not null,
-TELEFONO_EMERGENCIA varchar(50) not null,
-OBSERVACION varchar(50) not null,
-MODIFICA varchar(50) not null,
-constraint PK_ID_CLIENTE primary key (ID_CLIENTE))
-go
-
-create table TABLA_RESERVA(
-ID_RESERVA int not null,
-ID_HABITACION_RESERVA int not null,
-ID_CLIENTE_RESERVA varchar(50) not null,
-ESTADO varchar(50) not null,
-FECHA_LIMITE date not null,
-FECHA_INGRESO date not null,
-FECHA_SALIDA date not null,
-CANTIDAD_PERSONAS  int not null,
-CANTIDAD_DIAS int not null,
-MODIFICA varchar(50) not null,
-constraint PK_ID_RESERVA primary key (ID_RESERVA))
-go
-
-alter table TABLA_RESERVA
-add constraint FK_ID_HABITACION_RESERVA foreign key (ID_HABITACION_RESERVA)
-references TABLA_HABITACION(ID_HABITACION)
-go
-
-alter table TABLA_RESERVA
-add constraint FK_ID_CLIENTE_RESERVA foreign key (ID_CLIENTE_RESERVA)
-references TABLA_CLIENTE(ID_CLIENTE)
-go
-
 
 /*---------------------------------------------------------------*/
 /*-----------------------         -------------------------------*/
@@ -142,42 +149,17 @@ go
 
 create table TABLA_FACTURA(
 ID_FACTURA int not null,
-ID_RESERVA_FACTURA int not null,
 FECHA date not null,
 CLIENTE varchar(50) not null,
+CANTIDAD_DIAS int not null,
 TIPO_PAGO varchar(50) not null,
 SUBTOTAL decimal(10,2) not null,
 IMPUESTO decimal(10,2) not null,
 DESCUENTO decimal(10,2) not null,
 TOTAL decimal(10,2) not null,
-UTILIDAD_TOTAL decimal(10,2) not null,
 MODIFICA varchar(50) not null,
 constraint PK_ID_FACTURA primary key (ID_FACTURA))
 go
-
-create table TABLA_LINEA_FACTURA(
-ID_FACTURA_LINEA int not null,
-ID_LINEA varchar(30) not null,
-ID_RESERVA_LINEA int not null,
-DESCRIPCION varchar(50) not null,
-PRECIO_VENTA decimal(10,2) not null,
-PRECIO_VENTA_MAS_IMPUESTO decimal(10,2) not null,
-TOTAL_LINEA  decimal(10,2) not null,
-TOTAL_LINEA_IMPUESTO  decimal(10,2) not null,
-UTILIDAD_LINEA decimal(10,2) not null,
-MODIFICA varchar(50) not null)
-go
-
-alter table TABLA_LINEA_FACTURA
-add constraint FK_ID_FACTURA_LINEA foreign key (ID_FACTURA_LINEA)
-references TABLA_FACTURA(ID_FACTURA)
-go
-
-alter table TABLA_LINEA_FACTURA
-add constraint FK_ID_RESERVA_LINEA foreign key (ID_RESERVA_LINEA)
-references TABLA_RESERVA(ID_RESERVA)
-go
-
 
 use BD_Hospedaje
 go
@@ -185,15 +167,12 @@ go
 select * from TABLA_LICENCIA
 select * from TABLA_USUARIO
 select * from TABLA_INFO_EMPRE
-
-select * from TABLA_HABITACION
+select * from TABLA_HABITACIONES
+select * from TABLA_RESERVA
 select * from TABLA_INVENTARIO_HABITACION
 select * from TABLA_CLIENTE
-select * from TABLA_RESERVA
-
 select * from TABLA_NUM_FACTURA
 select * from TABLA_FACTURA
-select * from TABLA_LINEA_FACTURA
 go
 
 
